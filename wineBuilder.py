@@ -58,8 +58,8 @@ class WineBuilder(PdfBuilder):
         dvi2ps = ["dvips"]
 		# Get the platform 
         plat = sublime.platform()		
-		# ps2pdf command, with reasonable executable
-        gs = "gswin64c" if plat == "windows" else "gs"
+		# ps2pdf command, with reasonable executable (NOTE: we assume you installed 64-bit Ghostscrit)
+        gs = "gswin64c" if plat == "windows" else "gs-952-linux-x86_64"
         ps2pdf = [
             gs,
             "-dNOPAUSE",
