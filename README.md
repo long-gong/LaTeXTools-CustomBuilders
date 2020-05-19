@@ -5,22 +5,22 @@ This repo provides a simple custom latex builder for [LaTeXTools](https://github
 
 ## Overview
 
-This builder aims to natively solve the notorious "Not All Fonts Are Eebedded" issue. If you do not encounter such an issue, or we prefer more easier but less elegant solution (_e.g._, [How to embed all the fonts in a PDF file](http://as.exeter.ac.uk/media/level1/academicserviceswebsite/tqa/assessmentprogressionandawardingtaughtprogrammes/embedfonts.pdf)), then you do not spend any time to play with this builder. 
+This builder aims to natively solve the notorious "Not All Fonts Are Eebedded" issue. If you do not encounter such an issue, or we prefer easier but less elegant solution (_e.g._, [How to embed all the fonts in a PDF file](http://as.exeter.ac.uk/media/level1/academicserviceswebsite/tqa/assessmentprogressionandawardingtaughtprogrammes/embedfonts.pdf)), then you are not suggested to use this builder. 
 
-If you windows, then you are recommended to use [WinEdit](https://www.winedt.com/) to "emjoy all benefits of this builder" with much less and easier configurations: [tutorial](https://lgong30.github.io/skill/2015/08/05/Not-All-Font-Embedded.html).
+If you use windows, then you are recommended to use [WinEdit](https://www.winedt.com/) to "emjoy all benefits of this builder" with much less and easier configurations: [tutorial](https://lgong30.github.io/skill/2015/08/05/Not-All-Font-Embedded.html).
 
 
 Currently, this builder ONLY supports Windows and Linux, and ONLY tested under Windows 10 and Ubuntu 18.04. 
 
 ## Requirements
 
-Since this is a builder for LaTeXTools, a popular plugin for Sublime Text, therefore, you have to first install them: [tutorial](https://github.com/SublimeText/LaTeXTools/blob/master/README.markdown). 
+Since this is a builder for LaTeXTools, a popular plugin for Sublime Text, you have to first install them: [tutorial](https://github.com/SublimeText/LaTeXTools/blob/master/README.markdown). 
 
-In this builder, we use [Ghostscript](https://www.ghostscript.com/) to embed all fonts that are needed, so we also need download [the proper version of Ghostscript](https://www.ghostscript.com/download/gsdnld.html). Note that "GNU Affero General Public License" should be good enough. Please do not forget to add it to the PATH environment (you can either add it to the OS PATH environment or only add it to LaTeXTools via the "texpath" key for the platform you are using in its perference setting file, __i.e.,__ LaTeXTools.sublime-settings).
+In this builder, we use [Ghostscript](https://www.ghostscript.com/) to embed all fonts that are needed, so you also need download [the proper version of Ghostscript](https://www.ghostscript.com/download/gsdnld.html). Note that "GNU Affero General Public License" (*FREE LICENSE*) should be good enough. Please do not forget to add it to the PATH environment (you can either add it to the OS PATH environment or only add it to LaTeXTools via the "texpath" key for the platform you are using in its preference setting file, __i.e.,__ *LaTeXTools.sublime-settings*).
 
 ## Configuration
 
-1. Copy wineBuilder.py to the builders folder of LaTeXTools, usually it is located at <Packages Folder>\LaTeXTools\builders. <Packages Folder> can be found by selecting *Preferences|Browse Packages...* or running the *Preferences: Browse Packages* command in Sublime Text. 
+1. Copy **[wineBuilder.py](./wineBuilder.py)** to the builders folder of LaTeXTools, usually it is located at *<Packages Folder>\LaTeXTools\builders*. *<Packages Folder>* can be found by selecting *Preferences|Browse Packages...* or running the *Preferences: Browse Packages* command in Sublime Text. 
 2. Add the following lines in the sublime latex builder configuration file (__i.e.,__ *LaTeX.sublime-build*) as the last builder under the key "variants":
     ```json
     	{
