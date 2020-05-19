@@ -29,7 +29,7 @@ In this builder, we use [Ghostscript](https://www.ghostscript.com/) to embed all
 		}
     ```
     After adding the configuration file should be as follows.
-        ```json
+    ```json
     // Compilation settings
     // ====================
     //
